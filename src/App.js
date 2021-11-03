@@ -11,6 +11,8 @@ import Users from './components/Users'
 import UsersProfile from './components/UsersProfile'
 import Header from './components/Header';
 import Layout from './layout';
+import EmployeForm from './components/EmployeForm';
+import Message from './components/Message';
 
 
 
@@ -90,6 +92,10 @@ function App(props) {
           <Route exact path="/transaction" component={DashTransaction} />
           <Route exact path="/users" component={DashUsers} />
           <Route exact path="/usersprofile" component={DashUsersProfile} />
+          <Route exact path="/employeform" component={EmployeForm} />
+          <Route exact path="/message" component={Message} />
+
+
         </Switch>
       </BrowserRouter>
       {/* </div> */}

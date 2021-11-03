@@ -1,207 +1,89 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import EmployeForm from './EmployeForm'
+import { useState, useEffect } from 'react/cjs/react.development';
+import { useHistory } from 'react-router-dom'
+
+
 function Organazation(props) {
+    const [data, setData] = useState([]);
+    let history = useHistory();
+    // const [search, setSearch] = useState(null)
 
-    const [name, setName] = useState()
-    const [email, setEmail] = useState(null)
-    const [mobile, setMobile] = useState(null)
-    const [gender, setGender] = useState(null)
-    const [addedby, setAddedBy] = useState(null)
-    const [dob, setDob] = useState(null)
-    const [doj, setDoj] = useState(null)
-    const [department, setDepartment] = useState(null)
-    const [position, setPosition] = useState(null)
-    const [workType, setWorkType] = useState(null)
-    const [salary, setSalary] = useState(null)
-    const [accountNo, setAccountNo] = useState(null)
-    const [iFSCCode, setIFSCCode] = useState(null)
-    const [aadharNo, setAadharNo] = useState(null)
-    const [pANNo, setPANNo] = useState(null)
-    const [referredBy, setReferredBy] = useState(null)
-    const [address, setAddress] = useState(null)
-    const [city, setCity] = useState(null)
-    const [state, setState] = useState(null)
 
-    const create = () => {
-        // console.warn(useState);
-        // console.alrt("hdHCFDSBVHKsbj")
-        // console.log("buton working");
 
-        fetch("http://localhost:3000/zafar", {
-            method: "Post",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name, email, mobile, gender, addedby, dob, doj, department, position, workType, salary, accountNo
-                , iFSCCode, aadharNo, pANNo, referredBy, address, city, state
-            })
-        }).then((result) => {
-            result.json().then((res) => {
-                console.warn(res);
-                alert("Your Account is Successfully Added")
+    useEffect(() => {
+        fetch("http://localhost:3000/zafar").then((res) => {
+            res.json().then((results) => {
+                console.log(results)
+                setData(results)
+
             })
         })
 
 
-
-
+    }, [])
+    const handleClick = () => {
+        history.push('/employeform')
     }
 
-
-
-
-    console.log("Your page rndered")
+    console.log(data, "smting");
     return (
-        <div>
-            <div className=" items-center flex flex-col max-width-72 ">
+        <div >
+            <div>
+                <button className="bg-primary p-5 rounded float-right mr-5 font-bold text-white "
+                    onClick={handleClick}
+                >Add Employe</button>
+
+            </div>
+            {/* <div className=" flex justify-center border-primary mt-10 ">
+                <input type="text" className=" rounded border-2 outline-none  "
+                    onChange={(event) => setSearch(event.target.value)} />
+                    
+                <button className="pl-2  font-bold rounded ml-2">Search</button>
+            </div> */}
+            <div className=" mt-14 flex justify-center">
+                {
+                    data ?
+                        <div>
+                            <table className="border-2">
+                                <thead >
+                                    <tr className="border-2">
+                                        <th className="border-2 color-primary">Id</th>
+                                        <th className="border-2">Name </th>
+                                        <th className="border-2">Email </th>
+                                        <th className="border-2">Mobile No </th>
+                                        <th className="border-2">Position</th>
+                                        <th className="border-2">Work Type </th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    {
+                                        data.map((items, i) =>
 
 
 
-                <div className=" m-2">
-                    <div className=" flex flex-col border-2 border-primary p-14 space-y-2 " >
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Name:</label>
 
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setName(event.target.value)}
-                            /></span>
-                        {/* <p>{name}</p> */}
-                        <span className=" flex  flex-row ">
-                            <label for="email" className=" w-36">Email:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setEmail(event.target.value)} /></span>
-                        <span className="flex  flex-row ">
-                            <label for="mobile" className=" w-36"> Mobile No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setMobile(event.target.value)}
-                            /></span>
-                        <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">  Gender:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1"
-                                onChange={(event) => setGender(event.target.value)}>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-
-                            </select></span>
+                                            <tr className="space-x-5 pl-5">
+                                                <td className="border-2 text-right">{items.id}</td>
+                                                <td className="border-2 text-right">{items.name}</td>
+                                                <td className="border-2 text-right">{items.email}</td>
+                                                <td className="border-2 text-right">{items.mobile}</td>
+                                                <td className="border-2 text-right">{items.position}</td>
+                                                <td className="border-2 text-right">{items.workType}</td>
+                                            </tr>
 
 
-                        <span className="flex  flex-row ">
-                            <label for="added" className=" w-36"> Added By:</label>
-
-                            <select id="country" name="country" className=" outline-none  border-2 rounded border-primary pl-1"
-                                onChange={(event) => setAddedBy(event.target.value)}>
-                                <option  value="Admin">Admin</option>
-                                <option  value="Addmin" >Addmin</option>
-                                <option value="Ardminf" >Ardminf</option>
-                            </select></span>
-
-                        <span className="flex  flex-row ">
-                            <label for="birthday" className=" w-36">DOB:</label>
-
-
-                            <input type="date" id="birthday" name="birthday" className=" outline-none pl-1 border-2 rounded border-primary"
-                                onChange={(event) => setDob(event.target.value)}
-                            /></span>
-                        <span className="flex  flex-row ">
-                            <label for="birthday" className=" w-36">DOJ:</label>
-
-
-                            <input type="date" id="birthday" name="birthday" className=" outline-none pl-1 border-2 rounded border-primary"
-                                onChange={(event) => setDoj(event.target.value)} /></span>
-                        <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">Department:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1"
-                                onChange={(event) => setDepartment(event.target.value)}>
-                                <option value="Remote">Remote</option>
-                                <option value="Office">Office</option>
-                                <option value="Flexible">Flexible</option>
-                                <option value="Freelencer">Freelencer</option>
-
-                            </select></span>
-                        <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">Position:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1"
-                                onChange={(event) => setPosition(event.target.value)}>
-                                <option value="Front-end Developer">Front-end Developer</option>
-                                <option value="Backend Developer">Backend Developer</option>
-                                <option value="Full-stack Developer">Full-stack Developer</option>
-                                <option value="Desktop Developer">Desktop Developer</option>
-                                <option value="Mobile Developer">Mobile Developer</option>
-                                <option value="Graphics Developer">Graphics Developer</option>
-                            </select></span>
-                        <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">Work Type:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1"
-                                onChange={(event) => setWorkType(event.target.value)}>
-                                <option value="Remote">Remote</option>
-                                <option value="Office">Office</option>
-                                <option value="Flexible">Flexible</option>
-                                <option value="Freelencer">Freelencer</option>
-
-                            </select></span>
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Salary:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="number"
-                                onChange={(event) => setSalary(event.target.value)} /></span>
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Account No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="number"
-                                onChange={(event) => setAccountNo(event.target.value)}
-                            /></span>
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">IFSC Code:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setIFSCCode(event.target.value)} /></span>
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Aadhar No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="number"
-                                onChange={(event) => setAadharNo(event.target.value)} /></span>
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">PAN No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setPANNo(event.target.value)}
-                            /></span>
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Referred By:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setReferredBy(event.target.value)} /></span>
-                        <span className="flex  flex-row ">
-
-                            <label for="address" className=" w-36">Adress:</label>
-
-                            <input className="outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setAddress(event.target.value)} /></span>
-                        <span className="flex  flex-row ">
-                            <label for="city" className="w-36">  City:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setCity(event.target.value)}
-                            /></span>
-                        <span className="flex  flex-row ">
-                            <label for="state" className=" w-36 ">State:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text"
-                                onChange={(event) => setState(event.target.value)} /></span>
-                        <div className="  mt-10 ">
-                            <button className="border-0text-white float-right p-2 bg-primary text-lg rounded w-18"
-                                onClick={create} >Submit</button>
+                                        )
+                                    }
+                                </tbody>
+                            </table>
                         </div>
 
-                    </div>
-                </div>
+                        :
+                        <p>Please Wait........</p>
+                }
             </div>
         </div>
     );
