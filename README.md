@@ -81,3 +81,100 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 "# Dashboard" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+                this.data ?
+                    < div >
+                        <table>
+                            <thead >
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name </th>
+                                    <th>Last </th>
+                                    <th>Address </th>
+                                    <th>Mobile</th>
+                                    <th>Name </th>
+                                    <th>Address </th>
+                                    <th>khan </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {
+                                    data.map((items, i) => {
+                                        console.log(items)
+                                        return (
+
+
+                                            <div className="flex flex-row space-x-5">
+                                                {/* <h1 className="">{items.id}</h1> */}
+                                                {/* <h1 className="">{i}</h1> */}
+
+                                                {/* <h2 className="">{items.name}</h2>
+                                                <h2 className="">{items.email}</h2>
+                                                <h2 className="">{items.mobile}</h2>
+                                                <h2 className="">{items.gender}</h2>
+                                                <h2 className="">{items.addedby}</h2>
+                                                <h2 className="">{items.dob}</h2>
+                                                <h2 className="">{items.doj}</h2>
+                                                <h2 className="">{items.department}</h2>
+                                                <h2 className="">{items.position}</h2>
+                                                <h2 className="">{items.workType}</h2>
+                                                <h2 className="">{items.salary}</h2>
+                                                <h2 className="">{items.accountNo}</h2>
+                                                <h2 className="">{items.iFSCCode}</h2>
+                                                <h2 className="">{items.aadharNo}</h2>
+                                                <h2 className="">{items.pANNo}</h2>
+                                                <h2 className="">{items.referredBy}</h2>
+                                                <h2 className="">{items.address}</h2>
+                                                <h2 className="">{items.city}</h2>
+                                                <h2 className="">{items.state}</h2> */}
+                                                <tr>
+                                                    <td>{items.id}</td>
+                                                    <td>{items.name}</td>
+                                                    <td>{items.email}</td>
+                                                    <td>{items.mobile}</td>
+                                                    <td>{items.gender}</td>
+                                                    <td>{items.addedby}</td>
+                                                    <td>{items.dob}</td>
+                                                    <td>{items.doj}</td>
+                                                    <td>{items.department}</td>
+                                                </tr>
+
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    : <p>lodding here</p>
+            }
