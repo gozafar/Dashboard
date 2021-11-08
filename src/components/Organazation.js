@@ -1,139 +1,89 @@
 import React from 'react';
+import EmployeForm from './EmployeForm'
+import { useState, useEffect } from 'react/cjs/react.development';
+import { useHistory } from 'react-router-dom'
+
 
 function Organazation(props) {
-    console.log("Your page rndered")
+    const [data, setData] = useState([]);
+    let history = useHistory();
+    // const [search, setSearch] = useState(null)
+
+
+
+    useEffect(() => {
+        fetch("http://localhost:3000/zafar").then((res) => {
+            res.json().then((results) => {
+                console.log(results)
+                setData(results)
+
+            })
+        })
+
+
+    }, [])
+    const handleClick = () => {
+        history.push('/employeform')
+    }
+
+    console.log(data, "smting");
     return (
-        <div>
-            <div className=" items-center flex flex-col max-width-72 ">
+        <div >
+            <div>
+                <button className="bg-primary p-5 rounded float-right mr-5 font-bold text-white "
+                    onClick={handleClick}
+                >Add Employe</button>
 
-
-
-                <div className=" m-2">
-                    <div className=" flex flex-col border-2 border-primary p-14 space-y-2 " >
-                        <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Name:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                        <span className=" flex  flex-row ">
-                            <label for="email" className=" w-36">Email:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                        <span className="flex  flex-row ">
-                            <label for="mobile" className=" w-36"> Mobile No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                        <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">  Gender:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1">
-                                <option value="australia">Male</option>
-                                <option value="canada">Female</option>
-
-                            </select></span>
-
-
-                        <span className="flex  flex-row ">
-                            <label for="added" className=" w-36"> Added By:</label>
-
-                            <select id="country" name="country" className=" outline-none  border-2 rounded border-primary pl-1">
-                                <option value="Admin" className=" bg-primmary">Admin</option>
-                                <option value="Admin">Admin</option>
-                                <option value="Admin">Admin</option>
-                            </select></span>
-
-                        <span className="flex  flex-row ">
-                            <label for="birthday" className=" w-36">DOB:</label>
-
-
-                            <input type="date" id="birthday" name="birthday" className=" outline-none pl-1 border-2 rounded border-primary" /></span>
-                            <span className="flex  flex-row ">
-                            <label for="birthday" className=" w-36">DOJ:</label>
-
-
-                            <input type="date" id="birthday" name="birthday" className=" outline-none pl-1 border-2 rounded border-primary" /></span>
-                            <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">Department:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1">
-                                <option value="australia">Remote</option>
-                                <option value="australia">Office</option>
-                                <option value="australia">Flexible</option>
-                                <option value="australia">Freelencer</option>
-
-                            </select></span>
-                        <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">Position:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1">
-                                <option value="australia">Front-end Developer</option>
-                                <option value="australia">Backend Developer</option>
-                                <option value="australia">Full-stack Developer</option>
-                                <option value="australia">Desktop Developer</option>
-                                <option value="canada">Mobile Developer</option>
-                                <option value="canada">Graphics Developer</option>
-                            </select></span>
-                        <span className="flex  flex-row ">
-                            <label for="gender" className=" w-36">Work Type:</label>
-
-                            <select id="country" name="country" className=" outline-none border-2 rounded border-primary pl-1">
-                                <option value="australia">Remote</option>
-                                <option value="australia">Office</option>
-                                <option value="australia">Flexible</option>
-                                <option value="australia">Freelencer</option>
-
-                            </select></span>
-                            <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Salary:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="number" /></span>
-                            <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Account No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="number" /></span>
-                            <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">IFSC Code:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                            <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">Aadhar No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="number" /></span>
-                            <span className="flex  flex-row  ">
-                            <label for="birthday" className=" w-36  ">PAN No:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                        <span className="flex  flex-row ">
-
-                            <label for="address" className=" w-36">Adress:</label>
-
-                            <input className="outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                        <span className="flex  flex-row ">
-                            <label for="city" className="w-36">  City:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                        <span className="flex  flex-row ">
-                            <label for="state" className=" w-36 ">State:</label>
-
-                            <input className=" outline-none border-2 w-72 rounded border-primary pl-1" type="text" /></span>
-                        <div className="  mt-10 ">
-                            <button className="
+            </div>
+            {/* <div className=" flex justify-center border-primary mt-10 ">
+                <input type="text" className=" rounded border-2 outline-none  "
+                    onChange={(event) => setSearch(event.target.value)} />
                     
-                    border-0
-                    text-white
-                    float-right
-                   p-2
-                   bg-primary
-                   text-lg
-                    rounded
-                    w-18
-                    
+                <button className="pl-2  font-bold rounded ml-2">Search</button>
+            </div> */}
+            <div className=" mt-14 flex justify-center">
+                {
+                    data ?
+                        <div>
+                            <table className="border-2">
+                                <thead >
+                                    <tr className="border-2">
+                                        <th className="border-2 color-primary">Id</th>
+                                        <th className="border-2">Name </th>
+                                        <th className="border-2">Email </th>
+                                        <th className="border-2">Mobile No </th>
+                                        <th className="border-2">Position</th>
+                                        <th className="border-2">Work Type </th>
 
-                       
-                        ">Submit</button>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    {
+                                        data.map((items, i) =>
+
+
+
+
+                                            <tr className="space-x-5 pl-5">
+                                                <td className="border-2 text-right">{items.id}</td>
+                                                <td className="border-2 text-right">{items.name}</td>
+                                                <td className="border-2 text-right">{items.email}</td>
+                                                <td className="border-2 text-right">{items.mobile}</td>
+                                                <td className="border-2 text-right">{items.position}</td>
+                                                <td className="border-2 text-right">{items.workType}</td>
+                                            </tr>
+
+
+                                        )
+                                    }
+                                </tbody>
+                            </table>
                         </div>
 
-                    </div>
-                </div>
+                        :
+                        <p>Please Wait........</p>
+                }
             </div>
         </div>
     );
