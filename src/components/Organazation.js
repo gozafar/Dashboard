@@ -30,7 +30,10 @@ function Organazation(props) {
     return (
         <div >
             <div>
-                <button className="bg-primary p-5 rounded float-right mr-5 font-bold text-white "
+                <button className="bg-primary p-5 rounded 
+                mr-5
+
+                 font-bold text-white "
                     onClick={handleClick}
                 >Add Employe</button>
 
@@ -41,19 +44,20 @@ function Organazation(props) {
                     
                 <button className="pl-2  font-bold rounded ml-2">Search</button>
             </div> */}
-            <div className=" mt-14 flex justify-center">
+            
+            <div className=" mt-2 flex justify-start">
                 {
                     data ?
-                        <div>
+                        <div >
                             <table className="border-2">
                                 <thead >
                                     <tr className="border-2">
-                                        <th className="border-2 color-primary">Id</th>
-                                        <th className="border-2">Name </th>
+                                        <th className="border-2 color-primary ">Id</th>
+                                        <th className="border-2 " >Name </th>
                                         <th className="border-2">Email </th>
                                         <th className="border-2">Mobile No </th>
                                         <th className="border-2">Position</th>
-                                        <th className="border-2">Work Type </th>
+                                        <th className="border-2 ">Work Type </th>
 
                                     </tr>
 
@@ -69,7 +73,7 @@ function Organazation(props) {
                                                 <td className="border-2 text-right">{items.id}</td>
                                                 <td className="border-2 text-right">{items.name}</td>
                                                 <td className="border-2 text-right">{items.email}</td>
-                                                <td className="border-2 text-right">{items.mobile}</td>
+                                                <td className="border-2 text-right w-20">{items.mobile}</td>
                                                 <td className="border-2 text-right">{items.position}</td>
                                                 <td className="border-2 text-right">{items.workType}</td>
                                             </tr>
@@ -84,6 +88,7 @@ function Organazation(props) {
                         :
                         <p>Please Wait........</p>
                 }
+                
             </div>
         </div>
     );

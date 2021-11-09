@@ -13,6 +13,13 @@ import Header from './components/Header';
 import Layout from './layout';
 import EmployeForm from './components/EmployeForm';
 import Message from './components/Message';
+import Home from '../src/components/Home/Home'
+import Login from '../src/components/Home/Login'
+import SignUp from '../src/components/Home/SignUp'
+import Dash from './components/Dash'
+import Success  from './components/Home/Success'
+
+
 
 
 
@@ -65,6 +72,11 @@ function App(props) {
       <UsersProfile />
     </Layout>
   )
+  const DasRoute = () => (
+    <Layout>
+      <Dash />
+    </Layout>
+  )
 
 
   return (
@@ -84,7 +96,7 @@ function App(props) {
         {/* <div className="hidden md:block"> */}
         {/* </div> */}
         <Switch>
-          <Route exact path="/" component={DashBoard} />
+          <Route exact path="/dashboard" component={DashBoard} />
           <Route exact path="/accounts" component={DashAccounts} />
           <Route exact path="/organization" component={DashOrganazation} />
           <Route exact path="/refferals" component={DashRefferals} />
@@ -94,6 +106,14 @@ function App(props) {
           <Route exact path="/usersprofile" component={DashUsersProfile} />
           <Route exact path="/employeform" component={EmployeForm} />
           <Route exact path="/message" component={Message} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/dash" component={DasRoute} />
+          <Route exact path="/success" component={Success} />
+
+
+          
 
 
         </Switch>

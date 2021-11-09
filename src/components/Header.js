@@ -14,13 +14,10 @@ function Header(props) {
                             <div className="flex items-center">
                                 <div className="flex-shrink-0">
 
-                                    <a > <Link to="/"> <img
-                                        className="h-8 w-30 "
+                                    <a > <Link to="dashboard"> <img
+                                        className="h-8 w-30  "
                                         src={catax}
                                         alt="Workflow"
-
-
-
                                     /></Link>
 
                                     </a>
@@ -32,7 +29,7 @@ function Header(props) {
                                         <a
                                             href="#"
                                             className="  px-3 py-2 rounded-md text-sm font-medium">
-                                            <Link to="/">Dashboard</Link>
+                                            <Link to="dashboard">Dashboard</Link>
 
                                         </a>
 
