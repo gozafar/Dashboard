@@ -10,10 +10,10 @@ function SignUp(props) {
 
     const [name, setName] = useState(null)
     const [surname, setSurName] = useState(null)
+    const [username, setUsername] = useState(null)
     const [email, setEmail] = useState(null)
     const [mobile, setMobile] = useState(null)
     const [password, setPassword] = useState(null)
-    const [passwords, setPasswords] = useState(null)
     const [dob, setDob] = useState(null)
     const [gender, setGender] = useState(null)
 
@@ -28,7 +28,7 @@ const handle = () => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            name,surname,email,mobile,password,passwords,dob,gender
+            name,surname,email,mobile,password,username,dob,gender
         })
     }).then((result) => {
         result.json().then((res) => {
@@ -46,7 +46,7 @@ const handle = () => {
 
     
     return (
-        <div className="bg-gray-800 pt-32 h-screen">
+        <div className="bg-gray-800 pt-20 h-screen">
 
 
             <div className=" space-y-3 r">
@@ -64,6 +64,12 @@ const handle = () => {
                             placeholder="First Name" onChange={(event) => setName(event.target.value)} />
                         <input className="p-2 w-40 outline-none border-2 rounded-lg border-primary pl-1" type="text"
                             placeholder="Surname" onChange={(event) => setSurName(event.target.value)} />
+                    </div>
+                </div>
+                <div className="flex justify-center ">
+                    <div>
+                        <input className="p-2 w-96 outline-none border-2 rounded-lg border-primary pl-1" type="text"
+                            placeholder="Enter Your Username" onChange={(event) => setUsername(event.target.value)} />
                     </div>
                 </div>
 
@@ -86,12 +92,12 @@ const handle = () => {
                             placeholder="Enter Your Password" onChange={(event) => setPassword(event.target.value)} />
                     </div>
                 </div>
-                <div className="flex justify-center ">
+                {/* <div className="flex justify-center ">
                     <div>
                         <input className="p-2 w-96 outline-none border-2 rounded-lg border-primary pl-1" type="text"
                             placeholder="Enter Your Password" onChange={(event) => setPasswords(event.target.value)} />
                     </div>
-                </div>
+                </div> */}
 
 
                 <div className="flex justify-center ">

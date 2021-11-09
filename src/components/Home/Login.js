@@ -13,7 +13,7 @@ function Login() {
     const [password, setPassword] = useState(null)
 
     const handleClick = () => {
-        history.push('/dash')
+        history.push('/users')
     }
     const click = () => {
         history.push('/signup')
