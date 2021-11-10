@@ -27,10 +27,7 @@ function EmployeForm(props) {
     const [state, setState] = useState(null)
 
     const create = () => {
-        // console.warn(useState);
-        // console.alrt("hdHCFDSBVHKsbj")
-        // console.log("buton working");
-
+        
         fetch("http://localhost:3000/zafar", {
             method: "Post",
             headers: {
