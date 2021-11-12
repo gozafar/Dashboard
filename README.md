@@ -128,3 +128,44 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
             </div>
         // </div>
+
+
+
+
+
+
+
+
+        #
+        "const user = results.map( u => {
+                    if(u.email === email)
+                    return u
+                })
+                 if(paswword === user.password){
+                     setData(user)
+                 }
+                // setData(results)
+                return 'user not found'
+            })"
+
+
+
+            if (email === data.email && password === data.password) {
+      return history.push("/users");
+    } else {
+      alert("user not fine");
+    }
+
+    // history.push('/users')
+
+
+     const xyz=data.find((u)=>{
+        if (email === u.email && password === u.password) {
+            return history.push("/users");
+    }
+    else{
+        alert("user not fine");
+    }
+    
+
+    })
