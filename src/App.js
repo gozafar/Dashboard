@@ -1,30 +1,26 @@
-import React from 'react';
-import catax from '../src/catax.png'
+import React from "react";
+import catax from "../src/catax.png";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import Dashboard from './components/Dashboard'
-import Accounts from './components/Accounts';
-import Organazation from './components/Organazation'
-import Refferals from './components/Refferals'
-import Table from './components/Tables'
-import Transaction from './components/Transaction'
-import Users from './components/Users'
-import UsersProfile from './components/UsersProfile'
-import Header from './components/Header';
-import Layout from './layout';
-import EmployeForm from './components/EmployeForm';
-import Message from './components/Message';
-import Home from '../src/components/Home/Home'
-import Login from '../src/components/Home/Login'
-import SignUp from '../src/components/Home/SignUp'
-import Dash from './components/Dash'
-import Success  from './components/Home/Success'
-
-
-
-
+import Dashboard from "./components/Dashboard";
+import Accounts from "./components/Accounts";
+import Organazation from "./components/Organazation";
+import Refferals from "./components/Refferals";
+import Table from "./components/Tables";
+import Transaction from "./components/Transaction";
+import Users from "./components/Users";
+import UsersProfile from "./components/UsersProfile";
+import Header from "./components/Header";
+import Layout from "./layout";
+import EmployeForm from "./components/EmployeForm";
+import Message from "./components/Message";
+import Home from "../src/components/Home/Home";
+// import Login from '../src/components/Home/Login'
+import SignUp from "../src/components/Home/SignUp";
+import Dash from "./components/Dash";
+import Success from "./components/Home/Success";
+import Search from "./././components/Home/Search";
 
 function App(props) {
-
   const DashBoard = () => (
     <Layout>
       <Dashboard />
@@ -32,7 +28,7 @@ function App(props) {
 
     //  {/* <div><Header />
     //     <Dashboard /></div> */}
-  )
+  );
   const DashAccounts = () => (
     <Layout>
       <Accounts />
@@ -40,44 +36,42 @@ function App(props) {
 
     // {/* <div><Header />
     //   <Accounts /></div> */}
-  )
+  );
   const DashOrganazation = () => (
     <Layout>
       <Organazation />
     </Layout>
-  )
+  );
   const DashRefferals = () => (
-
     <Layout>
       <Refferals />
     </Layout>
-  )
+  );
   const DashTable = () => (
     <Layout>
       <Table />
     </Layout>
-  )
+  );
   const DashTransaction = () => (
     <Layout>
       <Transaction />
     </Layout>
-  )
+  );
   const DashUsers = () => (
     <Layout>
       <Users />
     </Layout>
-  )
+  );
   const DashUsersProfile = () => (
     <Layout>
       <UsersProfile />
     </Layout>
-  )
+  );
   const DasRoute = () => (
     <Layout>
       <Dash />
     </Layout>
-  )
-
+  );
 
   return (
     <div>
@@ -107,15 +101,11 @@ function App(props) {
           <Route exact path="/employeform" component={EmployeForm} />
           <Route exact path="/message" component={Message} />
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
+          {/* <Route exact path="/login" component={Login} /> */}
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dash" component={DasRoute} />
           <Route exact path="/success" component={Success} />
-
-
-          
-
-
+          <Route exact path="/search" component={Search} />
         </Switch>
       </BrowserRouter>
       {/* </div> */}
@@ -123,15 +113,9 @@ function App(props) {
       {/* // </div> */}
       {/* //   </div> */}
 
-
       {/* // </nav> */}
 
-      <div>
-
-
-
-      </div>
-
+      <div></div>
     </div>
   );
 }
