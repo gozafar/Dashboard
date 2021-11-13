@@ -1,37 +1,6 @@
 import React,{useState,useEffect} from 'react';
 
 function Tables(props) {
-<<<<<<< HEAD
-    const [ list, setList] = useState([])
-
-    useEffect(() => {
-        
-
-       fetch("http://localhost:3000/zafar").then((response) =>{
-           response.json().then((result)=>{
-               console.warn(result)
-               setList(result);
-           })
-       })
-    })
-    console.log(list,"smting here");
-    return (
-        <div>
-            <h1>Tables</h1>
-            {
-                list.map((item,i)=>{
-                    return(
-                        <div>
-                            <p>{item.Name}</p>
-                        </div>
-                    )
-                })
-            }
-        </div>
-
-    );
-   
-=======
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -107,7 +76,6 @@ function Tables(props) {
       )}
     </div>
   );
->>>>>>> 3c2e1a9c92ec126497459dab80f8c9f0dbd31340
 }
 
 export default Tables;
