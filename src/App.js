@@ -19,6 +19,7 @@ import SignUp from "../src/components/Home/SignUp";
 import Dash from "./components/Dash";
 import Success from "./components/Home/Success";
 import Search from "./././components/Home/Search";
+import Heading from "./components/head/Heading";
 
 function App(props) {
   const DashBoard = () => (
@@ -106,6 +107,7 @@ function App(props) {
           <Route exact path="/dash" component={DasRoute} />
           <Route exact path="/success" component={Success} />
           <Route exact path="/search" component={Search} />
+          <Route exact path="/heading" component={Heading} />
         </Switch>
       </BrowserRouter>
       {/* </div> */}

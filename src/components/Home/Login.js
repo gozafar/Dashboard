@@ -44,7 +44,7 @@ function Login() {
   };
 
   const click = () => {
-    history.push("/signup");
+    history.push("/search");
   };
   return (
     <div className=" h-screen float-right  ">

@@ -10,7 +10,7 @@ function Users(props) {
   // const [searchdata, setSearchData] = useState(null)
 
   useEffect(() => {
-    fetch("http://localhost:3000/zafar").then((res) => {
+    fetch("http://localhost:3004/zafar").then((res) => {
       res.json().then((results) => {
         console.log(results);
         setData(results);
@@ -60,7 +60,7 @@ function Users(props) {
               <thead>
                 <tr className="border-2">
                   <th className="border-2 color-primary ">Id</th>
-                  <th className="border-2 ">Name </th>
+                  {/* <th className="border-2 ">Name </th> */}
                   <th className="border-2 ">Username </th>
                   <th className="border-2">Email </th>
                   <th className="border-2">Mobile No </th>
@@ -70,7 +70,7 @@ function Users(props) {
                 {data.map((items, i) => (
                   <tr className="space-x-5 pl-5">
                     <td className="border-2 text-right">{items.id}</td>
-                    <td className="border-2 text-right">{items.name}</td>
+                    {/* <td className="border-2 text-right">{items.firstNme}</td> */}
                     <td className="border-2 text-right">{items.username}</td>
                     <td className="border-2 text-right">{items.email}</td>
                     <td className="border-2 text-right w-20">{items.mobile}</td>
