@@ -18,7 +18,7 @@ module.exports = {
        }),
       extend: {},
     },
-    variants: {
+    variants:{
       extend: {},
     },
     plugins: [],
