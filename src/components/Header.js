@@ -1,103 +1,87 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import catax from '../../src/catax.png'
-
-
+import catax from "../../src/catax.png";
 
 function Header(props) {
-    return (
-        <div>
-            <div>
-                <nav className="">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex items-center justify-between h-16">
-                            <div className="flex items-center">
-                                <div className="flex-shrink-0">
+  return (
+    <div>
+      <div>
+        <nav className="">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <Link to="dashboard">
+                    {" "}
+                    <img className="h-8 w-30  " src={catax} alt="Workflow" />
+                  </Link>
+                </div>
+                <div className="hidden md:block">
+                  <div className="ml-10 flex items-baseline space-x-4">
+                    <Link
+                      to="dashboard"
+                      className="  px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Dashboard
+                    </Link>
 
-                                    <a > <Link to="dashboard"> <img
-                                        className="h-8 w-30  "
-                                        src={catax}
-                                        alt="Workflow"
-                                    /></Link>
+                    <Link
+                      to="/accounts"
+                      className=" px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Accounts
+                    </Link>
 
-                                    </a>
+                    <Link
+                      to="/organization"
+                      className=" px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Organazation
+                    </Link>
 
+                    <Link
+                      to="/refferals"
+                      className=" px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Refferals
+                    </Link>
 
-                                </div>
-                                <div className="hidden md:block">
-                                    <div className="ml-10 flex items-baseline space-x-4">
-                                        <a
-                                            href="#"
-                                            className="  px-3 py-2 rounded-md text-sm font-medium">
-                                            <Link to="dashboard">Dashboard</Link>
+                    <Link
+                      to="/table"
+                      className=" px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Table
+                    </Link>
 
-                                        </a>
+                    <Link
+                      to="/transaction"
+                      className=" px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Transaction
+                    </Link>
 
-                                        <a
-                                            href="#"
-                                            className=" px-3 py-2 rounded-md text-sm font-medium"
-                                        >
-                                            <Link to="/accounts">Accounts</Link>
+                    <Link
+                      to="/users"
+                      className=" px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Users
+                    </Link>
 
-                                        </a>
-
-
-
-                                        <Link to="/organization" className=" px-3 py-2 rounded-md text-sm font-medium">Organazation</Link>
-
-
-
-                                        <a
-                                            href="#"
-                                            className=" px-3 py-2 rounded-md text-sm font-medium"
-                                        >
-                                            <Link to="/refferals">Refferals</Link>
-
-                                        </a>
-
-                                        <a
-                                            href="#"
-                                            className=" px-3 py-2 rounded-md text-sm font-medium"
-                                        >
-                                            <Link to="/table">Table</Link>
-
-                                        </a>
-                                        <a
-                                            href="#"
-                                            className=" px-3 py-2 rounded-md text-sm font-medium"
-                                        >
-                                            <Link to="/transaction">Transaction</Link>
-
-                                        </a>
-                                        <a
-                                            href="#"
-                                            className=" px-3 py-2 rounded-md text-sm font-medium"
-                                        >
-                                            <Link to="/users">Users</Link>
-
-                                        </a>
-
-                                        <a
-                                            href="#"
-                                            className=" px-3 py-2 rounded-md text-sm font-medium"
-                                        >
-                                            <Link to="/usersprofile">UsersProfile</Link>
-
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </nav>
-
-
+                    <Link
+                      to="/usersprofile"
+                      className=" px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      UsersProfile
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    );
+          </div>
+        </nav>
+      </div>
+    </div>
+  );
 }
 
 export default Header;

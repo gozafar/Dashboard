@@ -422,3 +422,14 @@ font-size: 2.5rem;
 font-size: 3.8rem;
 }
 }
+
+<div className="bg-primary h-16 ">
+      <div className="flex flex-row">
+        <div className="">
+          <h1 className="text-4xl p-2 pl-10 font-bold pr-5 text-white">
+            catax
+          </h1>
+        </div>
+
+      </div>
+    </div>
