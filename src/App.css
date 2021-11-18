@@ -1,0 +1,17 @@
+/* Designing for Dashboard.js inside the components/files/dashbord.js  */
+.main-menu {
+  font-weight: bold;
+  text-align: center;
+}
+.chart {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.main-col {
+  padding-left: 100px;
+  text-align: center;
+}
+.side {
+  margin-right: 100px;
+  text-align: center;
+}
