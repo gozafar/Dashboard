@@ -43,6 +43,7 @@ import GraphNav from "./components/File/Garph/GraphNav";
 import LayoutGraph from "./components/File/Garph/LayoutGraph";
 import MonthGraph from "./components/File/Garph/MonthGraph";
 import WeekGraph from "./components/File/Garph/WeekGraph";
+import Tasks from "./components/Tasks";
 function App(props) {
   const DashBoard = () => (
     <Layout>
@@ -206,6 +207,8 @@ function App(props) {
           <Route exact path="/monthgraph" component={DashMonthGraph} />
           <Route exact path="/weekgraph" component={DashWeekGraph} />
           <Route exact path="/graphnav" component={GraphNav} />
+          <Route exact path="/Tasks" component={Tasks} />
+
         </Switch>
       </BrowserRouter>
       <div></div>
