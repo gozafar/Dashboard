@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../../App.css";
-import GraphNav from "./Garph/GraphNav";
 import MonthGraph from "./Garph/MonthGraph";
 import WeekGraph from "./Garph/WeekGraph";
 
@@ -20,19 +19,20 @@ function Dashboards(props) {
         </div>
       </div>
       <div>
-        <div className="chart max-w-screen min-w-min h-80 relative  bg-primary border-4 font-bold">
-          <div className="flex absolute top-0 right-5">
-            <h1>Graph</h1>
-            <h1 onClick={() => setShow(false)}>WeekGraph</h1>
-            <h1 onClick={() => setShow(true)}>MonthGraph</h1>
+        <div className="chart max-w-screen min-w-min h-96 relative  bg-primary border-4 font-bold">
+          <div className="flex ">
+            {/* <h1>Graph</h1> */}
+            <button
+              className="absolute top-0 right-5 font-bold "
+              onClick={() => setShow(false)}
+            >
+              WeekGraph
+            </button>
+            <button className=" font-bold " onClick={() => setShow(true)}>
+              MonthGraph
+            </button>
           </div>
-          <div className="mt-10">
-            {show ? <MonthGraph /> : <WeekGraph />}
-
-            {/* <GraphNav /> */}
-            {/* <MonthGraph />
-<WeekGraph /> */}
-          </div>
+          <div className="mt-10">{show ? <MonthGraph /> : <WeekGraph />}</div>
         </div>
       </div>
       <div className="flex font-bold space-x-10 main-table">
