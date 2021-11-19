@@ -20,6 +20,14 @@ import Dash from "./components/Dash";
 import Success from "./components/Home/Success";
 import Search from "./././components/Home/Search";
 import Heading from "./components/head/Heading";
+import loginPage1 from "./components/Registration/loginPage1";
+import loginPage2 from "./components/Registration/loginPage2";
+import Signin from "./components/Registration/Signin";
+import Tasks from "./components/Tasks";
+
+
+
+
 
 function App(props) {
   const DashBoard = () => (
@@ -108,6 +116,13 @@ function App(props) {
           <Route exact path="/success" component={Success} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/heading" component={Heading} />
+          <Route exact path="/loginPage1" component={loginPage1} />
+          <Route exact path="/loginPage2" component={loginPage2} />
+          <Route exact path="/Signin" component={Signin} />
+          <Route exact path="/Tasks" component={Tasks} />
+
+
+
         </Switch>
       </BrowserRouter>
       {/* </div> */}

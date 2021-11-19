@@ -1,5 +1,5 @@
 .container{
-  background-color:#a64d79;
+  background-color:#f8f0f0;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -11,15 +11,18 @@
 .app-wrapper{
   background-color:#fff;
   min-width: 350px;
-  min-height: 650px;
+  min-height: 350px;
   padding: 30px;
   box-sizing: border-box;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 300px;
+  border:2px solid #a64d79;
+  border-style: dotted;
+
 }
 .input{
   height: 32px;
-  font-size: 20px;
+  font-size: 16px;
   outline:none;
   width: 100%;
   border-bottom:2px solid #a64d79;
@@ -43,15 +46,91 @@
 .submit{
   display:flex;
   text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 25px;
+  font-size: 15px;
+  border-radius: 15px;
   color: white;
   padding: 10px 60px ;
-  background: linear-gradient(to right,#ab1dcf,#f80759);
+  background: #a64d79;
   box-shadow: rgba(0,0,0,0.3)0px,19px,38px, rgba(0,0,0,0.22) 0px 15px 12px ;
   margin:auto;
   outline:none;
   border:none;
   cursor:pointer;
   transition: all 0.1s;
+}
+.g-signin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 100px;
+  margin-left: -50px;
+  
+}
+.sign-in-btn{
+  display:flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 15px;
+  color: white;
+  padding: 10px 60px ;
+  background: #a64d79;
+  box-shadow: rgba(0,0,0,0.3)0px,19px,38px, rgba(0,0,0,0.22) 0px 15px 12px ;
+  margin:auto;
+  outline:none;
+  border:none;
+  cursor:pointer;
+  transition: all 0.1s;
+}
+.sign-in-page{
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  
+
+}
+.task-main{
+  background-color:#f8f0f0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+.task-rg{
+  border: 2px solid red;
+  /* max-width:400px ; */
+  min-width: 420px;
+  /* min-height: 350px; */
+  /* padding: 30px; */
+  margin: 25px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+}
+.task-lf{
+  border: 2px solid black;
+  margin: 25px;
+  min-width: 970px;
+  background-color: #fff;
+  
+
+}
+.upper-l{
+  border: 2px solid goldenrod;
+  width: 400;
+  height: 300px;
+  margin-bottom: 70px;
+
+
+}
+.lower-l{
+  border: 2px solid black;
+  width: 400;
+  height: 300px;
+
+  
+
 }
