@@ -37,6 +37,12 @@ import Tickests from "./components/File/Tickests";
 import Transactions from "./components/File/Transactions";
 // components/files for navigation completed
 
+// import from components/files/GraphNav for navigation
+//
+import GraphNav from "./components/File/Garph/GraphNav";
+import LayoutGraph from "./components/File/Garph/LayoutGraph";
+import MonthGraph from "./components/File/Garph/MonthGraph";
+import WeekGraph from "./components/File/Garph/WeekGraph";
 function App(props) {
   const DashBoard = () => (
     <Layout>
@@ -148,6 +154,20 @@ function App(props) {
     </Layout1>
   );
 
+  /* import from components/files/GraphNav for navigation */
+  const DashWeekGraph = () => (
+    <LayoutGraph>
+      <Dashboards />
+      <MonthGraph />
+    </LayoutGraph>
+  );
+  const DashMonthGraph = () => (
+    <LayoutGraph>
+      <Dashboards />
+      <WeekGraph />
+    </LayoutGraph>
+  );
+
   return (
     <div>
       <BrowserRouter>
@@ -168,7 +188,6 @@ function App(props) {
           <Route exact path="/success" component={Success} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/heading" component={Heading} />
-
           {/* calling from files  */}
           <Route exact path="/account" component={DashAccount} />
           <Route exact path="/billing" component={DashBilling} />
@@ -181,8 +200,12 @@ function App(props) {
           <Route exact path="/setting" component={DashSetting} />
           <Route exact path="/task" component={DashTask} />
           <Route exact path="/tickests" component={DashTickests} />
-          {/* <Route exact path="/profile" component={Profile} /> */}
           <Route exact path="/transactions" component={DashTransactions} />
+          {/* import from components/files/GraphNav for navigation */}
+
+          <Route exact path="/monthgraph" component={DashMonthGraph} />
+          <Route exact path="/weekgraph" component={DashWeekGraph} />
+          <Route exact path="/graphnav" component={GraphNav} />
         </Switch>
       </BrowserRouter>
       <div></div>

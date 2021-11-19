@@ -14,4 +14,40 @@
 .side {
   margin-right: 100px;
   text-align: center;
+  min-width: 550px;
+}
+.Latest {
+  text-align: center;
+}
+.Search {
+  position: relative;
+}
+.Search-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.text-center {
+  position: absolute;
+  left: 300px;
+  top: 0;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+.main-table {
+  margin-right: 100px;
 }
