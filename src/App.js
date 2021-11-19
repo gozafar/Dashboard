@@ -11,6 +11,7 @@ import Users from "./components/Users";
 import UsersProfile from "./components/UsersProfile";
 import Header from "./components/Header";
 import Layout from "./layout";
+import Layout1 from "./components/File/Layout1";
 import EmployeForm from "./components/EmployeForm";
 import Message from "./components/Message";
 import Home from "../src/components/Home/Home";
@@ -19,32 +20,39 @@ import SignUp from "../src/components/Home/SignUp";
 import Dash from "./components/Dash";
 import Success from "./components/Home/Success";
 import Search from "./././components/Home/Search";
-import Heading from "./components/head/Heading";
-import loginPage1 from "./components/Registration/loginPage1";
-import loginPage2 from "./components/Registration/loginPage2";
-import Signin from "./components/Registration/Signin";
-import Tasks from "./components/Tasks";
+import Heading from "./components/main/Heading";
 
+// import from components/files for navigation
+import Account from "./components/File/Account";
+import Billing from "./components/File/Billing";
+import Dashboards from "./components/File/Dashboards";
+import Emails from "./components/File/Emails";
+import Logout from "./components/File/Logout";
+import Organizations from "./components/File/Organizations";
+import Profile from "./components/File/Profile";
+import Registraion from "./components/File/Registraion";
+import Setting from "./components/File/Setting";
+import Task from "./components/File/Task";
+import Tickests from "./components/File/Tickests";
+import Transactions from "./components/File/Transactions";
+// components/files for navigation completed
 
-
-
-
+// import from components/files/GraphNav for navigation
+//
+import GraphNav from "./components/File/Garph/GraphNav";
+import LayoutGraph from "./components/File/Garph/LayoutGraph";
+import MonthGraph from "./components/File/Garph/MonthGraph";
+import WeekGraph from "./components/File/Garph/WeekGraph";
 function App(props) {
   const DashBoard = () => (
     <Layout>
       <Dashboard />
     </Layout>
-
-    //  {/* <div><Header />
-    //     <Dashboard /></div> */}
   );
   const DashAccounts = () => (
     <Layout>
       <Accounts />
     </Layout>
-
-    // {/* <div><Header />
-    //   <Accounts /></div> */}
   );
   const DashOrganazation = () => (
     <Layout>
@@ -82,22 +90,87 @@ function App(props) {
     </Layout>
   );
 
+  {
+    /* calling from files  */
+  }
+  const DashAccount = () => (
+    <Layout1>
+      <Account />
+    </Layout1>
+  );
+  const DashBilling = () => (
+    <Layout1>
+      <Billing />
+    </Layout1>
+  );
+  const DashDashboards = () => (
+    <Layout1>
+      <Dashboards />
+    </Layout1>
+  );
+  const DashEmails = () => (
+    <Layout1>
+      <Emails />
+    </Layout1>
+  );
+  const DashLogout = () => (
+    <Layout1>
+      <Logout />
+    </Layout1>
+  );
+  const DashOrganizations = () => (
+    <Layout1>
+      <Organizations />
+    </Layout1>
+  );
+  const DashProfile = () => (
+    <Layout1>
+      <Profile />
+    </Layout1>
+  );
+  const DashRegistraion = () => (
+    <Layout1>
+      <Registraion />
+    </Layout1>
+  );
+  const DashSetting = () => (
+    <Layout1>
+      <Setting />
+    </Layout1>
+  );
+  const DashTask = () => (
+    <Layout1>
+      <Task />
+    </Layout1>
+  );
+  const DashTickests = () => (
+    <Layout1>
+      <Tickests />
+    </Layout1>
+  );
+  const DashTransactions = () => (
+    <Layout1>
+      <Transactions />
+    </Layout1>
+  );
+
+  /* import from components/files/GraphNav for navigation */
+  const DashWeekGraph = () => (
+    <LayoutGraph>
+      <Dashboards />
+      <MonthGraph />
+    </LayoutGraph>
+  );
+  const DashMonthGraph = () => (
+    <LayoutGraph>
+      <Dashboards />
+      <WeekGraph />
+    </LayoutGraph>
+  );
+
   return (
     <div>
-      {/* <nav className="">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-36"
-                  src={catax}
-                  alt="Workflow"
-                />
-              </div> */}
       <BrowserRouter>
-        {/* <div className="hidden md:block"> */}
-        {/* </div> */}
         <Switch>
           <Route exact path="/dashboard" component={DashBoard} />
           <Route exact path="/accounts" component={DashAccounts} />
@@ -110,28 +183,31 @@ function App(props) {
           <Route exact path="/employeform" component={EmployeForm} />
           <Route exact path="/message" component={Message} />
           <Route exact path="/" component={Home} />
-          {/* <Route exact path="/login" component={Login} /> */}
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dash" component={DasRoute} />
           <Route exact path="/success" component={Success} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/heading" component={Heading} />
-          <Route exact path="/loginPage1" component={loginPage1} />
-          <Route exact path="/loginPage2" component={loginPage2} />
-          <Route exact path="/Signin" component={Signin} />
-          <Route exact path="/Tasks" component={Tasks} />
+          {/* calling from files  */}
+          <Route exact path="/account" component={DashAccount} />
+          <Route exact path="/billing" component={DashBilling} />
+          <Route exact path="/dashboards" component={DashDashboards} />
+          <Route exact path="/emails" component={DashEmails} />
+          <Route exact path="/logout" component={DashLogout} />
+          <Route exact path="/organizations" component={DashOrganizations} />
+          <Route exact path="/profile" component={DashProfile} />
+          <Route exact path="/registration" component={DashRegistraion} />
+          <Route exact path="/setting" component={DashSetting} />
+          <Route exact path="/task" component={DashTask} />
+          <Route exact path="/tickests" component={DashTickests} />
+          <Route exact path="/transactions" component={DashTransactions} />
+          {/* import from components/files/GraphNav for navigation */}
 
-
-
+          <Route exact path="/monthgraph" component={DashMonthGraph} />
+          <Route exact path="/weekgraph" component={DashWeekGraph} />
+          <Route exact path="/graphnav" component={GraphNav} />
         </Switch>
       </BrowserRouter>
-      {/* </div> */}
-
-      {/* // </div> */}
-      {/* //   </div> */}
-
-      {/* // </nav> */}
-
       <div></div>
     </div>
   );
