@@ -37,7 +37,7 @@ function Heading(props) {
                 <Link to="/organizations">Organization</Link>
               </li>
               <li>
-                <Link to="/task">Task</Link>
+                <Link to="/Tasks">Task</Link>
               </li>
               <li>
                 <Link to="/setting">Setting</Link>

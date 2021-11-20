@@ -98,39 +98,88 @@
   align-items: center; */
 }
 .task-rg{
-  border: 2px solid red;
+  background-color: #f8f0f0;
   /* max-width:400px ; */
   min-width: 420px;
   /* min-height: 350px; */
   /* padding: 30px; */
   margin: 25px;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   
 }
 .task-lf{
-  border: 2px solid black;
+  border: 2px solid #a64d79;
   margin: 25px;
   min-width: 970px;
   background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+
+
   
 
 }
 .upper-l{
-  border: 2px solid goldenrod;
+  border: 2px solid #a64d79;
   width: 400;
   height: 300px;
   margin-bottom: 70px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+
+
 
 
 }
 .lower-l{
-  border: 2px solid black;
+  border: 2px solid #a64d79;
   width: 400;
   height: 300px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+
+
 
   
+
+}
+.task-btn{
+  font-size: 18px;
+  border-radius: 5px;
+  color: white;
+  padding:10px;
+  margin-left: 25px;
+  margin-top: 10px;
+  background: #a64d79;
+  
+  border: 2px solid green;
+  border:none;
+  cursor:pointer;
+  max-width: 100px;
+
+ 
+}
+.tab-row{
+  border-style: none;
+}
+.tab-data{
+  border-style: none;
+  width: 400px;
+  padding-left: 80px ;
+  padding-right: 200px;
+
+}
+.tab-data1{
+  border-style: none;
+  width: 400px;
+  padding-left: 100px ;
 
 }
