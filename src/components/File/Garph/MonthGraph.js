@@ -67,7 +67,7 @@ function MonthGraph(props) {
       <h1 className="">MonthGraph</h1>
       <ComposedChart
         width={700}
-        height={600}
+        height={340}
         data={data}
         margin={{
           top: 20,
