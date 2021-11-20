@@ -11,6 +11,9 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+
+// import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
+// const data = [{ name: "Page A", uv: 400, pv: 2400, amt: 2400 }];
 const data = [
   {
     Date: "01/01/2021",
@@ -59,26 +62,123 @@ const data = [
     amt: 1700,
     cnt: 380,
   },
+  {
+    Date: "01/07/2021",
+
+    uv: 1400,
+    pv: 780,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/08/2021",
+
+    uv: 1400,
+    pv: 880,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/09/2021",
+
+    uv: 1400,
+    pv: 980,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/10/2021",
+
+    uv: 1400,
+    pv: 480,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/11/2021",
+
+    uv: 1400,
+    pv: 580,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/12/2021",
+
+    uv: 1400,
+    pv: 780,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/01/2022",
+
+    uv: 1400,
+    pv: 880,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/02/2022",
+
+    uv: 1400,
+    pv: 680,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/03/2022",
+
+    uv: 1400,
+    pv: 980,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/04/2022",
+
+    uv: 2000,
+    pv: 880,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/05/2022",
+
+    uv: 1400,
+    pv: 780,
+    amt: 1700,
+    cnt: 380,
+  },
+  {
+    Date: "01/06/2022",
+
+    uv: 1600,
+    pv: 680,
+    amt: 1700,
+    cnt: 380,
+  },
 ];
 
 function MonthGraph(props) {
   return (
-    <div className="">
-      <h1 className="">MonthGraph</h1>
+    <div className="text-white">
+      {/* <h1 className="">MonthGraph</h1> */}
       <ComposedChart
-        width={700}
-        height={340}
+        className="text-white"
+        width={900}
+        height={360}
         data={data}
         margin={{
-          top: 20,
+          // top: 20,
           right: 20,
           bottom: 20,
           left: 20,
         }}
       >
-        <CartesianGrid stroke="#f5f5f5" />
-        <XAxis dataKey="Date" />
-        <YAxis />
+        <CartesianGrid stroke="#f5f5f6" />
+        <XAxis dataKey="Date" stroke="#000" />
+        <YAxis stroke="#000" />
         <Tooltip />
         <Legend />
         <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
