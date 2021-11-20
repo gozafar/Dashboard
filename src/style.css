@@ -113,7 +113,7 @@
 .task-lf{
   border: 2px solid #a64d79;
   margin: 25px;
-  min-width: 970px;
+  min-width: 600px;
   background-color: #fff;
   text-align: center;
   padding: 20px;
@@ -151,6 +151,17 @@
   
 
 }
+.middle-l{
+  border: 2px solid #a64d79;
+  min-width: 300px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  margin: 25px;
+
+
+}
 .task-btn{
   font-size: 18px;
   border-radius: 5px;
@@ -174,12 +185,29 @@
   border-style: none;
   width: 400px;
   padding-left: 80px ;
-  padding-right: 200px;
+  padding-right: 50px;
 
+}
+.tab-d{
+  border:2px solid #a64d79;
+  width: 400px;
+  padding-left: 80px ;
+  padding-right: 50px;
+  height: 40px;
 }
 .tab-data1{
   border-style: none;
-  width: 400px;
-  padding-left: 100px ;
+  width: 100px;
+  padding-left: 40px ;
+  text-align: end;
+  text-align: center;
 
+}
+.tab-d1{
+  border:2px solid #a64d79;
+  height: 40px;
+
+  width: 100px;
+  padding-left: 40px ;
+  text-align: end;
 }
