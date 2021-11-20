@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../App.css";
+import { DateRangePickerComponent } from "@syncfusion/ej2-react-calendars";
 import MonthGraph from "./Garph/MonthGraph";
 import WeekGraph from "./Garph/WeekGraph";
 
@@ -7,61 +8,68 @@ function Dashboards(props) {
   const [show, setShow] = useState(true);
   const [search, setSearch] = useState(null);
   return (
-    <div className="bg-red-50 text-white">
+    <div className="bg-red-50 text-black">
       <div className="main-menu flex p-6 flex-wrap justify-evenly  ">
-        <div className="w-56 h-36 bg-primary border-4 ">Registered Today</div>
-        <div className="w-56 h-36 bg-primary border-4">
-          Registered Yesterday
-        </div>
-        <div className="w-56 h-36 bg-primary border-4">Total Registred</div>
-        <div className="w-56 h-36 bg-primary border-4 ">
-          Incomplete Registration
-        </div>
+        <div className="w-56 h-36 border">Registered Today</div>
+        <div className="w-56 h-36  border">Registered Yesterday</div>
+        <div className="w-56 h-36  border">Total Registred</div>
+        <div className="w-56 h-36  border ">Incomplete Registration</div>
       </div>
       <div>
-        <div className="chart max-w-screen min-w-min h-96 relative  bg-primary border-4 font-bold">
+        <div className=" text-black chart max-w-screen min-w-min h-96 relative  border  font-bold">
           <div className="flex ">
             {/* <h1>Graph</h1> */}
             <button
-              className="absolute top-0 right-5 font-bold "
+              className="
+              absolute top-1 right-56
+              font-bold "
               onClick={() => setShow(false)}
+            >
+              MonthGraph
+            </button>
+            <button
+              className=" font-bold absolute top-1 left-5"
+              onClick={() => setShow(true)}
             >
               WeekGraph
             </button>
-            <button className=" font-bold " onClick={() => setShow(true)}>
-              MonthGraph
-            </button>
+            <div
+              className="
+              absolute top-0 right-5"
+            >
+              <DateRangePickerComponent placeholder="Enter a Date Here " />
+            </div>
           </div>
-          <div className="mt-10">{show ? <MonthGraph /> : <WeekGraph />}</div>
+          <div className="mt-10  w-4/5">
+            {show ? <WeekGraph /> : <MonthGraph />}
+          </div>
         </div>
       </div>
-      <div className="flex font-bold space-x-10 main-table">
-        <div className="main-col flex flex-col p-6 space-y-6 flex-wrap min-w-max">
-          <div className="w-56 h-36 bg-primary border-4 rounded">
-            Registered Today
-          </div>
-          <div className="w-56 h-36 bg-primary border-4 ">Registered Today</div>
-          <div className="w-56 h-36 bg-primary border-4 ">Registered Today</div>
-          <div className="w-56 h-36 bg-primary border-4 ">Registered Today</div>
+      <div className="flex  space-x-10 main-table text-black">
+        <div className="main-col flex flex-col p-6 space-y-6 flex-wrap min-w-max font-bold">
+          <div className="w-56 h-36 border  rounded">Registered Today</div>
+          <div className="w-56 h-36 border  rounded  ">Registered Today</div>
+          <div className="w-56 h-36 border  rounded  ">Registered Today</div>
+          <div className="w-56 h-36 border  rounded  ">Registered Today</div>
         </div>
-        <div className="side  h-screen w-full bg-primary  border-4 m-7 p-5">
+        <div className="side  h-screen w-full border m-7 p-5">
           <div className="flex Search ">
-            <div className=" text-center ">
+            <div className=" text-center font-bold">
               <h1 className="p1 ">Latest Registration</h1>
             </div>
-            {/* <div className="p-5 border-4 h-20">
+            {/* <div className="p-5  h-20">
             <h1 className="p1">Latest Registration</h1>
           </div> */}
             <div className=" space-x-2  Search-bar">
               <input
                 type="text"
-                className="outline-none rounded p-1 text-black"
+                className="outline-none rounded p-1 text-black "
                 placeholder="Search Here"
                 onChange={(event) => setSearch(event.target.value)}
               />
               <input
                 type="submit"
-                className="text-black outline-none rounded p-1"
+                className="text-black outline-none rounded p-1 bg-primary"
               />
             </div>
           </div>
