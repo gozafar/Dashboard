@@ -7,6 +7,11 @@ import WeekGraph from "./Garph/WeekGraph";
 function Dashboards(props) {
   const [show, setShow] = useState(true);
   const [search, setSearch] = useState(null);
+
+  const handle = (data) => {
+    console.log("adding", data);
+  };
+
   return (
     <div className="bg-red-50 text-black">
       <div className="main-menu flex p-6 flex-wrap justify-evenly  ">
@@ -16,7 +21,7 @@ function Dashboards(props) {
         <div className="w-56 h-36  border ">Incomplete Registration</div>
       </div>
       <div>
-        <div className=" text-black chart max-w-screen min-w-min h-96 relative  border  font-bold">
+        <div className=" text-black chart max-w-screen min-w-min h-96 relative border font-bold">
           <div className="flex ">
             {/* <h1>Graph</h1> */}
             <button
@@ -37,7 +42,10 @@ function Dashboards(props) {
               className="
               absolute top-0 right-5"
             >
-              <DateRangePickerComponent placeholder="Enter a Date Here " />
+              <DateRangePickerComponent
+                placeholder="Enter a Date Here "
+                change={handle}
+              />
             </div>
           </div>
           <div className="mt-10  w-4/5">
