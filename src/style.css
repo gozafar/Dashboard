@@ -1,0 +1,259 @@
+.container{
+  background-color:#f8f0f0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.app-wrapper{
+  background-color:#fff;
+  min-width: 350px;
+  min-height: 350px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  max-width: 300px;
+  border:2px solid #a64d79;
+  border-style: dotted;
+
+}
+.input{
+  height: 32px;
+  font-size: 16px;
+  outline:none;
+  width: 100%;
+  border-bottom:2px solid #a64d79;
+  
+  /* border-top-style:none ;
+  border-left-style: none;
+  border-right-style: none;
+  border-block-style: 2px solid black; */
+  margin-bottom: 20px;
+}
+.title{
+  font-size: 30px;
+  color: #a64d79;
+  text-align: center;
+  margin:80px 0px 40px 0px;
+  border:2px solid #a64d79;
+  border-radius: 5px;
+  padding: 10px 60px ;
+
+}
+.submit{
+  display:flex;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 15px;
+  color: white;
+  padding: 10px 60px ;
+  background: #a64d79;
+  box-shadow: rgba(0,0,0,0.3)0px,19px,38px, rgba(0,0,0,0.22) 0px 15px 12px ;
+  margin:auto;
+  outline:none;
+  border:none;
+  cursor:pointer;
+  transition: all 0.1s;
+}
+.g-signin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 100px;
+  margin-left: -50px;
+  
+}
+.sign-in-btn{
+  display:flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 15px;
+  color: white;
+  padding: 10px 60px ;
+  background: #a64d79;
+  box-shadow: rgba(0,0,0,0.3)0px,19px,38px, rgba(0,0,0,0.22) 0px 15px 12px ;
+  margin:auto;
+  outline:none;
+  border:none;
+  cursor:pointer;
+  transition: all 0.1s;
+}
+.sign-in-page{
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  
+
+}
+.task-main{
+  background-color:#f8f0f0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+.task-rg{
+  background-color: #f8f0f0;
+  /* max-width:400px ; */
+  min-width: 420px;
+  /* min-height: 350px; */
+  /* padding: 30px; */
+  margin: 25px;
+  /* background-color: #fff; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+}
+.task-lf{
+  border: 2px solid #a64d79;
+  margin: 25px;
+  min-width: 600px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+
+
+  
+
+}
+.upper-l{
+  border: 2px solid #a64d79;
+  width: 400;
+  height: 300px;
+  margin-bottom: 70px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+
+
+
+
+}
+.lower-l{
+  border: 2px solid #a64d79;
+  width: 400;
+  height: 300px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+
+
+
+  
+
+}
+.middle-l{
+  border: 2px solid #a64d79;
+  min-width: 300px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  margin: 25px;
+
+
+}
+.task-btn{
+  font-size: 18px;
+  border-radius: 5px;
+  color: white;
+  padding:10px;
+  margin-left: 25px;
+  margin-top: 10px;
+  background: #a64d79;
+  
+  border: 2px solid green;
+  border:none;
+  cursor:pointer;
+  max-width: 100px;
+
+ 
+}
+.tab-row{
+  border-style: none;
+}
+.tab-data{
+  border-style: none;
+  width: 400px;
+  padding-left: 80px ;
+  padding-right: 50px;
+
+}
+.tab-d{
+  border:2px solid #a64d79;
+  width: 400px;
+  padding-left: 80px ;
+  padding-right: 50px;
+  height: 40px;
+}
+.tab-data1{
+  border-style: none;
+  width: 100px;
+  padding-left: 40px ;
+  text-align: end;
+  text-align: center;
+
+}
+.tab-d1{
+  border:2px solid #a64d79;
+  height: 40px;
+
+  width: 100px;
+  padding-left: 40px ;
+  text-align: end;
+}
+.search-bar{
+  margin: 15px;
+  width: 350px;
+  padding: 10px;
+  height: 32px;
+  background-color: #fff;
+  padding-left: 10px;
+  /* margin-left: 25px; */
+  border-radius: 5px;
+  /* border-color: #a64d79; */
+  border-bottom:2px solid #a64d79;
+ 
+  
+}
+.registration-m{
+  background-color: #f8f0f0;
+  
+
+}
+.registration-l{
+  background-color: #f8f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reg-row{
+  background-color: #f8f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid #a64d79;
+  max-width: 900px;
+  height: 40px;
+  margin: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.date-p{
+  width: 350px;
+  background-color: #fff;
+  height: 32px;
+  margin-top: 20px;
+  border-bottom:2px solid #a64d79;
+  margin-right: 20px;
+
+}
