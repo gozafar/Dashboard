@@ -3,6 +3,13 @@ import "../../App.css";
 import MonthGraph from "./Garph/MonthGraph";
 import WeekGraph from "./Garph/WeekGraph";
 import { DateRangePickerComponent } from "@syncfusion/ej2-react-calendars";
+import { IStackTokens, Stack } from "@fluentui/react/lib/Stack";
+import {
+  Dropdown,
+  DropdownMenuItemType,
+  IDropdownStyles,
+  IDropdownOption,
+} from "@fluentui/react/lib/Dropdown";
 
 function Account(props) {
   const [show, setShow] = useState(true);
@@ -10,6 +17,51 @@ function Account(props) {
   const handle = (data) => {
     console.log("adding", data);
   };
+  const zafar = (e, data) => {
+    console.log("addinging", data);
+  };
+
+  const dropdownStyles: Partial<IDropdownStyles> = {
+    dropdown: { width: 200, float: "right", marginRight: "115px" },
+    dropdownOptionText: { overflow: "visible", whiteSpace: "normal" },
+    dropdownItem: { height: "auto" },
+  };
+
+  const options: IDropdownOption[] = [
+    { key: "broccoli", text: "Broccoli" },
+    { key: "carrot", text: "Carrot" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+    { key: "lettuce", text: "Lettuce" },
+  ];
+
+  const stackTokens: IStackTokens = { childrenGap: 20 };
   return (
     <div>
       <div className="bg-red-50 text-black">
@@ -23,6 +75,18 @@ function Account(props) {
           <div className="w-1/4 border">Total Accounts</div>
           <div className="w-1/4 border">Total Accounts</div>
           <div className="w-1/4 border">Total Accounts</div>
+        </div>
+        <div>
+          <div className="">
+            <Stack tokens={stackTokens}>
+              <Dropdown
+                onChange={zafar}
+                placeholder="Select an Exchangers"
+                options={options}
+                styles={dropdownStyles}
+              />
+            </Stack>
+          </div>
         </div>
         <div className="p-4">
           <div className=" text-black chart max-w-screen min-w-min h-96 relative border font-bold ">
