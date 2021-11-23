@@ -55,10 +55,10 @@ function Dashboards(props) {
       </div>
       <div className="flex  space-x-10 main-table text-black">
         <div className="main-col flex flex-col p-6 space-y-6 flex-wrap min-w-max font-bold">
-          <div className="w-56 h-36 border  rounded">Registered Today</div>
-          <div className="w-56 h-36 border  rounded  ">Registered Today</div>
-          <div className="w-56 h-36 border  rounded  ">Registered Today</div>
-          <div className="w-56 h-36 border  rounded  ">Registered Today</div>
+          <div className="w-56 h-36 border  rounded">Total Users</div>
+          <div className="w-56 h-36 border  rounded">Total Accounts</div>
+          <div className="w-56 h-36 border  rounded">INR Tranactions</div>
+          <div className="w-56 h-36 border  rounded">Total Tranactions</div>
         </div>
         <div className="side  h-screen w-full border m-7 p-5">
           <div className="flex Search ">
@@ -77,7 +77,7 @@ function Dashboards(props) {
               />
               <input
                 type="submit"
-                className="text-black outline-none rounded p-1 bg-primary"
+                className="text-black outline-none rounded p-1 "
               />
             </div>
           </div>
