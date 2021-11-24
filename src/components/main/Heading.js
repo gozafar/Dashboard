@@ -19,7 +19,7 @@ function Heading(props) {
             <Link to="/dashboards">Dashboard</Link>
           </li>
           <li>
-            <Link to="/registration">Registration</Link>
+            <Link to="/NewRegister">Registration</Link>
           </li>
           <li>
             <Link to="/account">Accounts</Link>

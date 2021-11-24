@@ -14,7 +14,8 @@ function Tasks(props) {
       <span
         style={{
           paddingLeft: "900px",
-          fontSize: "18px",
+          fontSize: "22px",
+          fontWeight:"bold"
         }}
       >
         My Tasks
