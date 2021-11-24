@@ -1,32 +1,26 @@
 import React from "react";
-import catax from "../src/catax.png";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Accounts from "./components/Accounts";
-import Organazation from "./components/Organazation";
-import Refferals from "./components/Refferals";
-import Table from "./components/Tables";
-import Transaction from "./components/Transaction";
-import Users from "./components/Users";
-import UsersProfile from "./components/UsersProfile";
-import Header from "./components/Header";
-import Layout from "./layout";
-import Layout1 from "./components/File/Layout1";
-import EmployeForm from "./components/EmployeForm";
-import Message from "./components/Message";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "../src/components/Home/Home";
 // import Login from '../src/components/Home/Login'
 import SignUp from "../src/components/Home/SignUp";
-import Dash from "./components/Dash";
-import Success from "./components/Home/Success";
 import Search from "./././components/Home/Search";
-import Heading from "./components/main/Heading";
-
+import Accounts from "./components/Accounts";
+import Dash from "./components/Dash";
+import Dashboard from "./components/Dashboard";
+import EmployeForm from "./components/EmployeForm";
 // import from components/files for navigation
 import Account from "./components/File/Account";
 import Billing from "./components/File/Billing";
 import Dashboards from "./components/File/Dashboards";
 import Emails from "./components/File/Emails";
+// components/files for navigation completed
+// import from components/files/GraphNav for navigation
+//
+import GraphNav from "./components/File/Garph/GraphNav";
+import LayoutGraph from "./components/File/Garph/LayoutGraph";
+import MonthGraph from "./components/File/Garph/MonthGraph";
+import WeekGraph from "./components/File/Garph/WeekGraph";
+import Layout1 from "./components/File/Layout1";
 import Logout from "./components/File/Logout";
 import Organizations from "./components/File/Organizations";
 import Profile from "./components/File/Profile";
@@ -35,15 +29,24 @@ import Setting from "./components/File/Setting";
 import Task from "./components/File/Task";
 import Tickests from "./components/File/Tickests";
 import Transactions from "./components/File/Transactions";
-// components/files for navigation completed
-
-// import from components/files/GraphNav for navigation
-//
-import GraphNav from "./components/File/Garph/GraphNav";
-import LayoutGraph from "./components/File/Garph/LayoutGraph";
-import MonthGraph from "./components/File/Garph/MonthGraph";
-import WeekGraph from "./components/File/Garph/WeekGraph";
+import Success from "./components/Home/Success";
+import Heading from "./components/main/Heading";
+import Message from "./components/Message";
+import Organazation from "./components/Organazation";
+import Refferals from "./components/Refferals";
+import Complete from "./components/Registration-page/Complete";
+import Incomplete from "./components/Registration-page/Incomplete";
+import Letest from "./components/Registration-page/Letest";
+import MyClients from "./components/Registration-page/MyClients";
+import MyNotes from "./components/Registration-page/MyNotes";
+import NewRegister from "./components/Registration-page/NewRegister";
+import Table from "./components/Tables";
 import Tasks from "./components/Tasks";
+import Transaction from "./components/Transaction";
+import Users from "./components/Users";
+import UsersProfile from "./components/UsersProfile";
+import Layout from "./layout";
+
 function App(props) {
   const DashBoard = () => (
     <Layout>
@@ -169,6 +172,43 @@ function App(props) {
     </LayoutGraph>
   );
 
+  const DeshComplete = () => (
+    <Layout1>
+      <Registraion />
+      <Complete />
+    </Layout1>
+  );
+  const DeshIncomplete = () => (
+    <Layout1>
+      <Registraion />
+      <Incomplete />
+    </Layout1>
+  );
+  const DeshLetest = () => (
+    <Layout1>
+      <Registraion />
+      <Letest />
+    </Layout1>
+  );
+  const DeshMyClients = () => (
+    <Layout1>
+      <Registraion />
+      <MyClients />
+    </Layout1>
+  );
+  const DeshMyNotes = () => (
+    <Layout1>
+      <Registraion />
+      <MyNotes />
+    </Layout1>
+  );
+  const DeshNewRegister = () => (
+    <Layout1>
+      <Registraion />
+      <NewRegister />
+    </Layout1>
+  );
+
   return (
     <div>
       <BrowserRouter>
@@ -201,7 +241,7 @@ function App(props) {
           <Route exact path="/setting" component={DashSetting} />
           <Route exact path="/task" component={DashTask} />
           <Route exact path="/tickests" component={DashTickests} />
-          <Route exact path="/transactions" component={DashTransactions} />
+          <Route exact path="/Transactions" component={DashTransactions} />
           {/* import from components/files/GraphNav for navigation */}
 
           <Route exact path="/monthgraph" component={DashMonthGraph} />
@@ -209,6 +249,12 @@ function App(props) {
           <Route exact path="/graphnav" component={GraphNav} />
           <Route exact path="/Tasks" component={Tasks} />
 
+          <Route exact path="/Complete" component={DeshComplete} />
+          <Route exact path="/Incomplete" component={DeshIncomplete} />
+          <Route exact path="/Letest" component={DeshLetest} />
+          <Route exact path="/MyClients" component={DeshMyClients} />
+          <Route exact path="/MyNotes" component={DeshMyNotes} />
+          <Route exact path="/NewRegister" component={DeshNewRegister} />
         </Switch>
       </BrowserRouter>
       <div></div>
