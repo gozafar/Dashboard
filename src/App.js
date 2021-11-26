@@ -223,12 +223,12 @@ function App(props) {
           <Route exact path="/usersprofile" component={DashUsersProfile} />
           <Route exact path="/employeform" component={EmployeForm} />
           <Route exact path="/message" component={Message} />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dash" component={DasRoute} />
           <Route exact path="/success" component={Success} />
           <Route exact path="/search" component={Search} />
-          <Route exact path="/heading" component={Heading} />
+          <Route exact path="/" component={Heading} />
           {/* calling from files  */}
           <Route exact path="/account" component={DashAccount} />
           <Route exact path="/billing" component={DashBilling} />

@@ -28,7 +28,7 @@ function Heading(props) {
             <Link to="/transactions">Transaction</Link>
           </li>
           <li>
-            <Link to="">More</Link>
+            <Link to="billing">More</Link>
             <ul className="space-y-2 w-28 pt-6 pl-4 rounded-lg pb-3 ">
               <li>
                 <Link to="/billing">Billing</Link>
