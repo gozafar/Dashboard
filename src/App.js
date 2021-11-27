@@ -46,6 +46,7 @@ import Transaction from "./components/Transaction";
 import Users from "./components/Users";
 import UsersProfile from "./components/UsersProfile";
 import Layout from "./layout";
+import UserAccount from "./components/User/UserAccounts";
 
 function App(props) {
   const DashBoard = () => (
@@ -208,6 +209,11 @@ function App(props) {
       <NewRegister />
     </Layout1>
   );
+  const DashUserAccount = () => (
+    <Layout1>
+      <UserAccount />
+    </Layout1>
+  );
 
   return (
     <div>
@@ -234,7 +240,7 @@ function App(props) {
           <Route exact path="/billing" component={DashBilling} />
           <Route exact path="/dashboards" component={DashDashboards} />
           <Route exact path="/emails" component={DashEmails} />
-          <Route exact path="/logout" component={DashLogout} />
+          {/* <Route exact path="/logout" component={DashLogout} /> */}
           <Route exact path="/organizations" component={DashOrganizations} />
           <Route exact path="/profile" component={DashProfile} />
           <Route exact path="/registration" component={DashRegistraion} />
@@ -255,6 +261,8 @@ function App(props) {
           <Route exact path="/MyClients" component={DeshMyClients} />
           <Route exact path="/MyNotes" component={DeshMyNotes} />
           <Route exact path="/NewRegister" component={DeshNewRegister} />
+
+          <Route exact path="/logout" component={DashUserAccount} />
         </Switch>
       </BrowserRouter>
       <div></div>

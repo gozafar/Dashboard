@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../App.css";
+import { Link } from "react-router-dom";
 import { DateRangePickerComponent } from "@syncfusion/ej2-react-calendars";
 import MonthGraph from "./Garph/MonthGraph";
 import WeekGraph from "./Garph/WeekGraph";
@@ -85,6 +86,10 @@ function Dashboards(props) {
             <div className="flex pt-20 ">
               <table>
                 <tr>
+                  {/* <th>
+                    <a href="/logout">Name</a>
+                  </th> */}
+
                   <th>Name</th>
                   <th>Email</th>
                   <th>Date</th>
